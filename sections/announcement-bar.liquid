@@ -134,6 +134,8 @@
         </style>
       {%- endif -%}
     {%- endif -%}
+    {{ section.settings.sizes }}
+    {{ section.settings.vertical_alignment }}
     <div class="localization-wrapper">
       {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
         <localization-form class="small-hide medium-hide">
@@ -233,6 +235,58 @@
       "id": "enable_language_selector",
       "default": false,
       "label": "t:sections.announcement-bar.settings.enable_language_selector.label"
+    },
+    {
+      "type": "select",
+      "id": "sizes",
+      "label": "Sizes",
+      "options": [
+        {
+          "value": "xs",
+          "label": "X-small"
+        },
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "X-large"
+        },
+        {
+          "value": "xxl",
+          "label": "XX-large"
+        }
+      ],
+      "default": "m"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "middle",
+          "label": "Middle"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "bottom"
     }
   ],
   "blocks": [
